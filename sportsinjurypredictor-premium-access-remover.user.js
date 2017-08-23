@@ -5,8 +5,8 @@
 // @description  enjoy all statistics from Sports Injury Predictor
 // @author       h01000110
 // @match        http://sportsinjurypredictor.com/*
-// @updateURL    https://github.com/h01000110/js-scripts/blob/master/sportsinjurypredictor-premium-access-remover.user.js
-// @downloadURL  https://github.com/h01000110/js-scripts/blob/master/sportsinjurypredictor-premium-access-remover.user.js
+// @updateURL    https://github.com/h01000110/js-scripts/raw/master/sportsinjurypredictor-premium-access-remover.user.js
+// @downloadURL  https://github.com/h01000110/js-scripts/raw/master/sportsinjurypredictor-premium-access-remover.user.js
 // @grant        none
 // ==/UserScript==
 
