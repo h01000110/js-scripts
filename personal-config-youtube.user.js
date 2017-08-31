@@ -37,7 +37,10 @@ function plyd () {
             var check = setInterval(function() {
                 anot = document.getElementsByClassName("ytp-menuitem-toggle-checkbox")[1];
                 if (typeof anot !== "undefined") {
-                    eventFire(anot, 'click');
+                    var verf = document.getElementsByClassName("ytp-player-content")[1];
+                    if (verf.style.display === "") {
+                        eventFire(anot, 'click');
+                    }
                     clearInterval(check);
                 }
             }, 1000); /**/
