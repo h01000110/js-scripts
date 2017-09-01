@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Personal Config 4 Youtube
 // @namespace    https://h01000110.github.io/20170831/personal-config-youtube
-// @version      0.1
+// @version      0.2
 // @description  open your videos always in theater mode and others features
 // @author       h01000110
 // @match        http://www.youtube.com/*
@@ -39,7 +39,10 @@ function plyd () {
                 if (typeof anot !== "undefined") {
                     var verf = document.getElementsByClassName("ytp-player-content")[1];
                     if (verf.style.display === "") {
+                        var sett = document.getElementsByClassName("ytp-settings-button")[0];
+                        eventFire(sett, 'click');
                         eventFire(anot, 'click');
+                        eventFire(sett, 'click');
                     }
                     clearInterval(check);
                 }
