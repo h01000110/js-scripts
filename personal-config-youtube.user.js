@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Personal Config 4 Youtube
 // @namespace    https://h01000110.github.io/20170831/personal-config-youtube
-// @version      0.2
+// @version      0.3
 // @description  open your videos always in theater mode and others features
 // @author       h01000110
 // @match        http://www.youtube.com/*
@@ -12,7 +12,9 @@
 // ==/UserScript==
 
 var ply;
+var avatar;
 var anot;
+var btnAn;
 var local = location.href;
 ply = document.getElementsByTagName("ytd-watch")[0];
 
@@ -33,17 +35,15 @@ function plyd () {
             ply.setAttribute("theater-requested_", "");
             ply.setAttribute("theater", "");
             /* Uncomment the section below for disabling video annotations
-            anot = document.getElementsByClassName("ytp-menuitem-toggle-checkbox")[1];
+            avatar = document.getElementsByClassName("ytp-iv-player-content")[0];
             var check = setInterval(function() {
-                anot = document.getElementsByClassName("ytp-menuitem-toggle-checkbox")[1];
-                if (typeof anot !== "undefined") {
-                    var verf = document.getElementsByClassName("ytp-player-content")[1];
-                    if (verf.style.display === "") {
-                        var sett = document.getElementsByClassName("ytp-settings-button")[0];
-                        eventFire(sett, 'click');
-                        eventFire(anot, 'click');
-                        eventFire(sett, 'click');
-                    }
+                avatar = document.getElementsByClassName("ytp-iv-player-content")[0];
+                anot = document.getElementsByClassName("ytp-iv-video-content")[0];
+                btnAn = document.getElementsByClassName("ytp-menuitem")[1];
+                if (typeof avatar !== "undefined") {
+                    avatar.style.display = "none";
+                    anot.style.display = "none";
+                    btnAn.setAttribute("aria-checked", false);
                     clearInterval(check);
                 }
             }, 1000); /**/
